@@ -7,7 +7,7 @@
 <br />
 <br />
 
-# 🎓 VedaAI — Assessment
+# VedaAI — AI Assessment Creator
 
 ### *Build smarter assessments. Teach faster. Empower every student.*
 
@@ -25,7 +25,7 @@
 
 <br />
 
-[**🚀 Live Demo**](https://veda-ai-assessment-gold.vercel.app/) · [**📦 GitHub Repository**](https://github.com/manishpatel00/VedaAI-Assessment) · [**🎨 Figma Design**](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) · [**⚙️ Setup Guide**](./SETUP.md)
+[**Live Demo**](https://veda-ai-assessment-gold.vercel.app/) · [**GitHub Repository**](https://github.com/manishpatel00/VedaAI-Assessment) · [**Figma Design**](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) · [**Setup Guide**](./SETUP.md)
 
 <br />
 
@@ -33,7 +33,7 @@
 
 </div>
 
-## 🌟 Why VedaAI?
+## Why VedaAI?
 
 > **The problem:** Teachers spend hours crafting balanced question papers — picking questions, calibrating difficulty, formatting sections, and exporting to print.
 >
@@ -41,35 +41,35 @@
 
 <br />
 
-## 📑 Table of Contents
+## Table of Contents
 
 <table>
 <tr>
 <td valign="top" width="33%">
 
 ### Getting Started
-- [📖 Overview](#-overview)
-- [🎯 Assessment Coverage](#-assessment-coverage)
-- [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
+- [Overview](#overview)
+- [Assessment Coverage](#assessment-coverage)
+- [Features](#features)
+- [Quick Start](#quick-start)
 
 </td>
 <td valign="top" width="33%">
 
 ### Engineering
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🏗️ Architecture](#️-architecture)
-- [🧠 Approach](#-approach--design-decisions)
-- [📂 Project Structure](#-project-structure)
+- [Tech Stack](#tech-stack)
+- [Architecture](#advanced-architecture)
+- [Approach](#approach--design-decisions)
+- [Project Structure](#project-structure)
 
 </td>
 <td valign="top" width="33%">
 
 ### Deep Dive
-- [🤖 AI Pipeline](#-ai-generation-pipeline)
-- [🔌 Backend Architecture](#-backend-reference-architecture)
-- [🎨 Design Fidelity](#-design-fidelity)
-- [🗺️ Roadmap](#️-roadmap)
+- [AI Pipeline](#ai-generation-pipeline)
+- [Backend Architecture](#backend-reference-architecture)
+- [Design Fidelity](#design-fidelity)
+- [Roadmap](#roadmap)
 
 </td>
 </tr>
@@ -77,33 +77,27 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **VedaAI Assessment Creator** is a full-stack web application designed for the **VedaAI Full Stack Engineering Assignment**. It empowers educators to:
 
 <table>
 <tr>
-<td>📝</td>
 <td><b>Create assignments</b> with rich, validated multi-step forms</td>
 </tr>
 <tr>
-<td>🤖</td>
 <td><b>Generate AI-powered question papers</b> with structured prompts (sections, difficulty, marks)</td>
 </tr>
 <tr>
-<td>📊</td>
 <td><b>View beautifully formatted papers</b> that resemble real exam documents</td>
 </tr>
 <tr>
-<td>📥</td>
 <td><b>Download as PDF</b> with multi-page pagination via jsPDF + html2canvas</td>
 </tr>
 <tr>
-<td>🔄</td>
 <td><b>Regenerate</b> papers with one click for unlimited variations</td>
 </tr>
 <tr>
-<td>📡</td>
 <td><b>Receive real-time updates</b> via simulated WebSocket connection</td>
 </tr>
 </table>
@@ -114,14 +108,14 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 
 ---
 
-## 🎯 Assessment Coverage
+## Assessment Coverage
 
 > Every requirement from the official assignment, tracked transparently.
 >
 > ✅ Implemented · 🟡 Reference Architecture · ⭐ Bonus
 
 <details open>
-<summary><b>🎨 1. Assignment Creation (Frontend)</b></summary>
+<summary><b>1. Assignment Creation (Frontend)</b></summary>
 
 | # | Requirement | Status | Implementation |
 |---|-------------|:------:|----------------|
@@ -137,7 +131,7 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 </details>
 
 <details open>
-<summary><b>🤖 2. AI Question Generation</b></summary>
+<summary><b>2. AI Question Generation</b></summary>
 
 | # | Requirement | Status | Implementation |
 |---|-------------|:------:|----------------|
@@ -151,7 +145,7 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 </details>
 
 <details open>
-<summary><b>⚙️ 3. Backend System (Reference Architecture)</b></summary>
+<summary><b>3. Backend System (Reference Architecture)</b></summary>
 
 | # | Requirement | Status | Notes |
 |---|-------------|:------:|-------|
@@ -164,7 +158,7 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 </details>
 
 <details open>
-<summary><b>📋 4. Output Page (Enhanced)</b></summary>
+<summary><b>4. Output Page (Enhanced)</b></summary>
 
 | # | Requirement | Status |
 |---|-------------|:------:|
@@ -199,9 +193,9 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 
 ---
 
-## ✨ Features
+## Features
 
-### 🎯 Multi-Step Assignment Wizard
+### Multi-Step Assignment Wizard
 
 A two-step form designed for **speed and clarity**:
 
@@ -210,28 +204,28 @@ A two-step form designed for **speed and clarity**:
 <td width="50%" valign="top">
 
 **Step 1 — Assignment Details**
-- 📤 Drag-and-drop file upload
-- 📅 Due date selector
-- 🏷️ Subject + Grade dropdowns
-- 📚 Topic / Chapter input
-- ⏱️ Time allowed stepper
-- 🏫 School name customization
+- Drag-and-drop file upload
+- Due date selector
+- Subject + Grade dropdowns
+- Topic / Chapter input
+- Time allowed stepper
+- School name customization
 
 </td>
 <td width="50%" valign="top">
 
 **Step 2 — Question Configuration**
-- ➕ Dynamic question type rows (up to 6)
-- 🔢 +/- steppers for count & marks
-- 🎚️ Difficulty preset selector
-- 📝 Additional instructions
-- 📊 **Live summary** widget
+- Dynamic question type rows (up to 6)
+- +/- steppers for count & marks
+- Difficulty preset selector
+- Additional instructions
+- **Live summary** widget
 
 </td>
 </tr>
 </table>
 
-### 🤖 AI Question Generation Pipeline
+### AI Question Generation Pipeline
 
 ```
 User Input ──▶ buildPrompt() ──▶ LLM ──▶ Parse JSON ──▶ Validate ──▶ Render
@@ -244,40 +238,40 @@ User Input ──▶ buildPrompt() ──▶ LLM ──▶ Parse JSON ──▶ 
 - ✅ Difficulty distribution algorithm (Easy → Medium → Hard)
 - ✅ 8 question type templates with topic interpolation
 
-### 📋 Beautiful Question Paper Output
+### Beautiful Question Paper Output
 
-- 🏫 **School header** with class & subject
-- ⏱️ **Time allowed** & maximum marks
-- 👤 **Student info** with underline placeholders
-- 📑 **Sectioned layout** (Section A, B, C…)
-- 🏷️ **Color-coded difficulty badges**
-- 💯 **Marks per question** + section totals
-- 📝 **MCQ options** auto-rendered (a, b, c, d)
+- **School header** with class & subject
+- **Time allowed** & maximum marks
+- **Student info** with underline placeholders
+- **Sectioned layout** (Section A, B, C…)
+- **Color-coded difficulty badges**
+- **Marks per question** + section totals
+- **MCQ options** auto-rendered (a, b, c, d)
 
-### 📥 Export & Actions
+### Export & Actions
 
-- 📄 **PDF Export**: Multi-page support via lazy-loaded `jsPDF` + `html2canvas`
-- 🔄 **Regenerate**: Fresh variants with one click
-- 🗑️ **Delete**: With context menu
-- 🔍 **Search & Filter**: Live filtering of assignments
+- **PDF Export**: Multi-page support via lazy-loaded `jsPDF` + `html2canvas`
+- **Regenerate**: Fresh variants with one click
+- **Delete**: With context menu
+- **Search & Filter**: Live filtering of assignments
 
-### 📡 Real-Time WebSocket Updates
+### Real-Time WebSocket Updates
 
 ```
-[15%]  ⚡ Connecting to AI engine...
-[30%]  📊 Analyzing assignment parameters...
-[50%]  🛠️  Generating question structure...
-[65%]  📝 Creating questions by difficulty...
-[80%]  ✨ Formatting sections...
-[90%]  ✅ Validating question paper...
-[100%] 🎉 Question paper ready!
+[15%]   Connecting to AI engine...
+[30%]   Analyzing assignment parameters...
+[50%]    Generating question structure...
+[65%]   Creating questions by difficulty...
+[80%]   Formatting sections...
+[90%]  Validating question paper...
+[100%]  Question paper ready!
 ```
 
 <br />
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 > **Want detailed step-by-step instructions?** → See **[SETUP.md](./SETUP.md)** for VS Code setup, GitHub push, and Vercel deployment.
 
@@ -291,7 +285,7 @@ User Input ──▶ buildPrompt() ──▶ LLM ──▶ Parse JSON ──▶ 
 
 ```bash
 # Clone
-git clone https://github.com/YOUR_USERNAME/VedaAI-Assessment.git
+git clone https://github.com/manishpatel00/VedaAI-Assessment.git
 cd VedaAI-Assessment
 
 # Install
@@ -299,7 +293,7 @@ npm install
 
 # Run dev server
 npm run dev
-# ➜ http://localhost:5173
+# http://localhost:5173
 
 # Build for production
 npm run build
@@ -310,13 +304,13 @@ npm run preview
 
 ### Deploy to Vercel (1-Click)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/VedaAI-Assessment)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/manishpatel00/VedaAI-Assessment)
 
 <br />
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend (Implemented)
 
@@ -359,43 +353,43 @@ npm run preview
 
 ---
 
-## 🏗️ Advanced Architecture
+## Advanced Architecture
 
 ### Frontend Architecture (React + Zustand)
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                      VedaAI SPA (Vite)                       │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Views Layer                                                 │
+┌─────────────────────────────────────────────────────────────┐
+│                      VedaAI SPA (Vite)                      │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Views Layer                                                │
 │  ├─ Home (Welcome + stats)                                  │
 │  ├─ Assignments (List + search/filter)                      │
 │  ├─ Create (2-step form with validation)                    │
 │  ├─ ViewPaper (Question paper display)                      │
 │  └─ AIToolkit (Playground)                                  │
-│                                                              │
-│  Components Layer (Reusable)                                 │
+│                                                             │
+│  Components Layer (Reusable)                                │
 │  ├─ Sidebar (Desktop nav + logo)                            │
 │  ├─ Header (Breadcrumb + actions)                           │
 │  ├─ MobileHeader + MobileNav (Responsive)                   │
 │  ├─ AssignmentCard (Grid display)                           │
 │  └─ FormSteps (Multi-step wizard)                           │
-│                                                              │
-│  State Management (Zustand)                                  │
+│                                                             │
+│  State Management (Zustand)                                 │
 │  ├─ assignments[] (Full list)                               │
 │  ├─ selectedAssignment (Active)                             │
 │  ├─ formData (Multi-step form state)                        │
 │  ├─ isGenerating (Progress tracking)                        │
 │  ├─ progressSteps[] (7-stage WS sim)                        │
 │  └─ helpers (CRUD + generation)                             │
-│                                                              │
-│  Utilities & Helpers                                         │
+│                                                             │
+│  Utilities & Helpers                                        │
 │  ├─ AI Generator (buildPrompt → parse → validate)           │
 │  ├─ PDF Exporter (jsPDF + html2canvas)                      │
 │  └─ WebSocket Simulator (Realistic progress)                │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
             │
             │ REST API + WebSocket
             ▼
@@ -404,33 +398,33 @@ npm run preview
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
 │  HTTP Layer (Express + TypeScript)                           │
-│  ├─ POST   /api/assignments (Create + queue)               │
-│  ├─ GET    /api/assignments (List)                         │
-│  ├─ GET    /api/assignments/:id (Fetch single)            │
-│  ├─ POST   /api/assignments/:id/regenerate (Re-queue)     │
-│  ├─ DELETE /api/assignments/:id (Remove)                  │
-│  └─ GET    /api/assignments/:id/pdf (Server export)       │
+│  ├─ POST   /api/assignments (Create + queue)                 │
+│  ├─ GET    /api/assignments (List)                           │
+│  ├─ GET    /api/assignments/:id (Fetch single)               │
+│  ├─ POST   /api/assignments/:id/regenerate (Re-queue)        │
+│  ├─ DELETE /api/assignments/:id (Remove)                     │
+│  └─ GET    /api/assignments/:id/pdf (Server export)          │
 │                                                              │
 │  Job Queue Layer (BullMQ + Redis)                            │
-│  ├─ paper-generation queue                                  │
-│  ├─ pdf-export queue                                        │
-│  └─ 7-step progress tracking                                │
+│  ├─ paper-generation queue                                   │
+│  ├─ pdf-export queue                                         │
+│  └─ 7-step progress tracking                                 │
 │                                                              │
 │  AI Integration (LLM Handler)                                │
-│  ├─ buildPrompt(formData) → structured prompt              │
-│  ├─ callLLM(prompt) → JSON response                        │
-│  └─ validatePaper(response) → typed schema                 │
+│  ├─ buildPrompt(formData) → structured prompt                │
+│  ├─ callLLM(prompt) → JSON response                          │
+│  └─ validatePaper(response) → typed schema                   │
 │                                                              │
 │  Database Layer                                              │
-│  ├─ MongoDB (Assignments + Papers)                          │
-│  ├─ Redis (Cache + BullMQ backend)                          │
-│  └─ Connection pooling + retries                            │
+│  ├─ MongoDB (Assignments + Papers)                           │
+│  ├─ Redis (Cache + BullMQ backend)                           │
+│  └─ Connection pooling + retries                             │
 │                                                              │
 │  Real-Time Layer (Socket.io)                                 │
-│  ├─ connection event (handshake)                            │
-│  ├─ progress event (7 stages with % + message)             │
-│  ├─ completed event (paper ready)                           │
-│  └─ error event (fallback handling)                         │
+│  ├─ connection event (handshake)                             │
+│  ├─ progress event (7 stages with % + message)               │
+│  ├─ completed event (paper ready)                            │
+│  └─ error event (fallback handling)                          │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
 ```
@@ -485,9 +479,9 @@ POST /api/assignments { formData }
 
 ---
 
-## 🧠 Approach & Design Decisions
+## Approach & Design Decisions
 
-### 1️⃣ Why Zustand over Redux?
+### 1 Why Zustand over Redux?
 
 | Criterion | Zustand | Redux Toolkit |
 |-----------|:-------:|:-------------:|
@@ -500,7 +494,7 @@ POST /api/assignments { formData }
 
 **Conclusion:** Zustand for this scale = perfect choice.
 
-### 2️⃣ Type-Safe AI Contract
+### 2 Type-Safe AI Contract
 
 The frontend **never trusts raw LLM output**. Every response goes through strict validation:
 
@@ -535,7 +529,7 @@ interface Question {
 }
 ```
 
-### 3️⃣ Prompt Engineering
+### 3 Prompt Engineering
 
 ```typescript
 const buildPrompt = (form: AssignmentFormData) => `
@@ -576,14 +570,13 @@ Return ONLY valid JSON matching this schema:
 `;
 ```
 
-### 4️⃣ WebSocket Lifecycle Management
+### 4 WebSocket Lifecycle Management
 
 The frontend ships with a **realistic WebSocket simulator** that mimics real behavior:
 
 ```typescript
 function simulateWebSocket(onProgress, onComplete) {
-  const steps = [
-    { progress: 15, status: 'Connecting to AI engine...' },
+  const steps = [{ progress: 15, status: 'Connecting to AI engine...' },
     { progress: 30, status: 'Analyzing assignment parameters...' },
     { progress: 50, status: 'Generating question structure...' },
     { progress: 65, status: 'Creating questions by difficulty...' },
@@ -607,7 +600,7 @@ function simulateWebSocket(onProgress, onComplete) {
 
 **To swap for real Socket.io:** Single-line change in `useAssignmentStore.ts`.
 
-### 5️⃣ Difficulty Distribution Algorithm
+### 5 Difficulty Distribution Algorithm
 
 ```typescript
 function getDifficultyForIndex(index: number, total: number): Difficulty {
@@ -618,7 +611,7 @@ function getDifficultyForIndex(index: number, total: number): Difficulty {
 }
 ```
 
-### 6️⃣ Lazy-Loaded PDF Generation
+### 6 Lazy-Loaded PDF Generation
 
 PDF libraries are loaded **only when needed** (saves ~400 KB on initial bundle):
 
@@ -630,7 +623,7 @@ const handleDownloadPDF = async () => {
 };
 ```
 
-### 7️⃣ Pixel-Perfect Figma Implementation
+### 7 Pixel-Perfect Figma Implementation
 
 Every Figma node was extracted and reproduced with care:
 
@@ -646,54 +639,54 @@ Every Figma node was extracted and reproduced with care:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 VedaAI-Assessment/
-├── 📁 public/                          # Static assets (favicons, OG images)
+├── public/                          # Static assets (favicons, OG images)
 │
-├── 📁 src/
-│   ├── 📁 components/                  # Reusable UI components
-│   │   ├── 🧩 Sidebar.tsx             # Desktop sidebar with Figma-exact logo
-│   │   ├── 🧩 Header.tsx              # Desktop top header (notifications, profile)
-│   │   ├── 🧩 MobileHeader.tsx        # Mobile header (logo + bell + avatar)
-│   │   └── 🧩 MobileNav.tsx           # Bottom nav floating pill
+├── src/
+│   ├── components/                  # Reusable UI components
+│   │   ├── Sidebar.tsx             # Desktop sidebar with Figma-exact logo
+│   │   ├── Header.tsx              # Desktop top header (notifications, profile)
+│   │   ├── MobileHeader.tsx        # Mobile header (logo + bell + avatar)
+│   │   └── MobileNav.tsx           # Bottom nav floating pill
 │   │
-│   ├── 📁 views/                       # Page-level views (route equivalents)
-│   │   ├── 🏠 HomeView.tsx            # Dashboard with stats & quick actions
-│   │   ├── 📋 AssignmentsView.tsx     # List view with empty state
-│   │   ├── ➕ CreateAssignmentView.tsx # 2-step form wizard
-│   │   ├── 📄 ViewPaperView.tsx       # Question paper output + PDF download
-│   │   └── 🤖 AIToolkitView.tsx       # AI tools showcase
+│   ├── views/                       # Page-level views (route equivalents)
+│   │   ├── HomeView.tsx            # Dashboard with stats & quick actions
+│   │   ├── AssignmentsView.tsx     # List view with empty state
+│   │   ├── CreateAssignmentView.tsx # 2-step form wizard
+│   │   ├── ViewPaperView.tsx       # Question paper output + PDF download
+│   │   └── AIToolkitView.tsx       # AI tools showcase
 │   │
-│   ├── 📁 store/                       # Zustand state management
-│   │   └── 🗄️  useAssignmentStore.ts  # Single source of truth
+│   ├── store/                       # Zustand state management
+│   │   └── useAssignmentStore.ts  # Single source of truth
 │   │
-│   ├── 📁 utils/
-│   │   └── 🛠️  cn.ts                   # className merger (clsx + tailwind-merge)
+│   ├── utils/
+│   │   └── cn.ts                   # className merger (clsx + tailwind-merge)
 │   │
-│   ├── ⚛️  App.tsx                     # Root component (view router)
-│   ├── 🎯 main.tsx                     # React entry point
-│   └── 🎨 index.css                    # Tailwind + global styles
+│   ├── App.tsx                     # Root component (view router)
+│   ├── main.tsx                     # React entry point
+│   └── index.css                    # Tailwind + global styles
 │
-├── 📄 .env.example                     # Environment template
-├── 📄 .gitignore                       # Git exclusions
-├── 📄 index.html                       # HTML shell
-├── 📦 package.json                     # Dependencies & scripts
-├── ⚙️  tsconfig.json                   # TypeScript config
-├── ⚙️  vite.config.ts                  # Vite build config
-├── 🎨 tailwind.config.js               # Tailwind theme
-├── 🚀 vercel.json                      # Vercel deployment config
-├── 📖 README.md                        # You are here
-├── ⚙️  SETUP.md                        # Complete setup guide
-└── 📜 LICENSE                          # MIT license
+├── .env.example                     # Environment template
+├── .gitignore                       # Git exclusions
+├── index.html                       # HTML shell
+├── package.json                     # Dependencies & scripts
+├── tsconfig.json                   # TypeScript config
+├── vite.config.ts                  # Vite build config
+├── tailwind.config.js               # Tailwind theme
+├── vercel.json                      # Vercel deployment config
+├── README.md                        # You are here
+├── SETUP.md                        # Complete setup guide
+└── LICENSE                          # MIT license
 ```
 
 <br />
 
 ---
 
-## 🤖 AI Generation Pipeline
+## AI Generation Pipeline
 
 ### End-to-End Flow
 
@@ -723,8 +716,7 @@ VedaAI-Assessment/
   "timeAllowed": 45,
   "maximumMarks": 20,
   "generalInstructions": "All questions are compulsory unless stated otherwise.",
-  "sections": [
-    {
+  "sections": [{
       "id": "section-A",
       "title": "Section A",
       "subtitle": "Multiple Choice Questions",
@@ -750,7 +742,7 @@ VedaAI-Assessment/
 
 ---
 
-## 🔌 Backend Reference Architecture
+## Backend Reference Architecture
 
 > The full backend code blueprints are documented in **[SETUP.md → Step 6](./SETUP.md#-step-6--backend-setup-optional)**.
 
@@ -841,7 +833,7 @@ socket.on('completed', ({ paper }) => onPaperReady(paper));
 
 ---
 
-## 🎨 Design Fidelity
+## Design Fidelity
 
 Every screen was reproduced **pixel-by-pixel** from the official Figma file.
 
@@ -889,7 +881,7 @@ Every screen was reproduced **pixel-by-pixel** from the official Figma file.
 
 ---
 
-## 📱 Responsive Behavior
+## Responsive Behavior
 
 | Breakpoint | Width | Layout |
 |------------|-------|--------|
@@ -899,17 +891,17 @@ Every screen was reproduced **pixel-by-pixel** from the official Figma file.
 
 ### Mobile-Specific Features
 
-- 🔄 Adaptive sub-page header (with back arrow + title)
-- 📱 Bottom nav with safe-area padding for iOS notch
-- 🎯 FAB button positioned above mobile nav
-- 📐 Single → 2-column card grid at `md` breakpoint
-- 🔍 Compact filter bar on mobile, expanded on desktop
+- Adaptive sub-page header (with back arrow + title)
+- Bottom nav with safe-area padding for iOS notch
+- FAB button positioned above mobile nav
+- Single → 2-column card grid at `md` breakpoint
+- Compact filter bar on mobile, expanded on desktop
 
 <br />
 
 ---
 
-## ⚡ Performance Optimizations
+## Performance Optimizations
 
 | Technique | Impact |
 |-----------|--------|
@@ -934,7 +926,7 @@ Every screen was reproduced **pixel-by-pixel** from the official Figma file.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Manual Test Checklist
 
@@ -983,7 +975,7 @@ test('createAssignment adds to list and starts generation', async () => {
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### v1.1 — Real Backend (Q2 2026)
 - [ ] Real OpenAI / Claude integration
@@ -1012,7 +1004,7 @@ test('createAssignment adds to list and starts generation', async () => {
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -1047,7 +1039,7 @@ perf:     Performance improvement
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
@@ -1055,7 +1047,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **[VedaAI Team](https://vedaai.com/)** for the thoughtful assignment design
 - **[Figma Community](https://www.figma.com/community)** for excellent design tooling
@@ -1066,14 +1058,14 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 | Resource | Description |
 |----------|-------------|
-| [⚙️ SETUP.md](./SETUP.md) | Complete VS Code + GitHub + Vercel setup guide |
-| [📜 LICENSE](./LICENSE) | MIT License text |
-| [🎨 Figma Design](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) | Original design file |
-| [📝 Assignment Brief](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform) | Submission form |
+| [SETUP.md](./SETUP.md) | Complete VS Code + GitHub + Vercel setup guide |
+| [LICENSE](./LICENSE) | MIT License text |
+| [Figma Design](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) | Original design file |
+| [Assignment Brief](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform) | Submission form |
 
 <br />
 
@@ -1081,15 +1073,13 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-### Built with ❤️ for the **VedaAI Full Stack Engineering Assignment**
+### Built for the **VedaAI Full Stack Engineering Assignment**
 
 <br />
 
-**[⬆ Back to Top](#-vedaai--ai-assessment-creator)** · **[⚙️ Setup Guide](./SETUP.md)** · **[🚀 Live Demo](#)**
+**[Back to Top](#vedaai--ai-assessment-creator)** · **[Setup Guide](./SETUP.md)** · **[Live Demo](https://veda-ai-assessment-gold.vercel.app/)**
 
 <br />
-
-⭐ **If you found this useful, please star the repo!** ⭐
 
 <br />
 
