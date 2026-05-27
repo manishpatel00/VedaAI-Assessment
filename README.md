@@ -1,195 +1,139 @@
 <div align="center">
-
 <br />
-
 <img src="https://img.shields.io/badge/VedaAI-Assessment%20-FF5623?style=for-the-badge&logo=react&logoColor=white" alt="VedaAI" height="40" />
-
-<br />
 <br />
 
-# VedaAI — AI Assessment Creator
+# VedaAI — Assessment
 
-### *Build smarter assessments. Teach faster. Empower every student.*
-
-**A production-grade, AI-powered platform that enables teachers to create, customize, and deliver structured question papers in seconds.**
+**A full-stack AI-powered platform that lets teachers create assignments, generate structured question papers using AI, and export them as PDF — built for the VedaAI Full Stack Engineering Assignment.**
 
 <br />
 
-[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-4.1-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Zustand](https://img.shields.io/badge/Zustand-State-orange?style=flat-square)](https://github.com/pmndrs/zustand)
-[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000?style=flat-square&logo=vercel)](https://vercel.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://veda-ai-assessment-gold.vercel.app/)
+[![GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manishpatel00/VedaAI-Assessment)
+[![Figma](https://img.shields.io/badge/Design-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment)
 
 <br />
 
-[**Live Demo**](https://veda-ai-assessment-gold.vercel.app/) · [**GitHub Repository**](https://github.com/manishpatel00/VedaAI-Assessment) · [**Figma Design**](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) · [**Setup Guide**](./SETUP.md)
-
-<br />
-
----
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-4.1-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Zustand](https://img.shields.io/badge/Zustand-State-orange)](https://github.com/pmndrs/zustand)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 </div>
 
-## Why VedaAI?
+---
 
-> **The problem:** Teachers spend hours crafting balanced question papers — picking questions, calibrating difficulty, formatting sections, and exporting to print.
->
-> **The solution:** VedaAI converts a simple form into a beautifully structured exam paper in seconds. Teachers configure the rules; AI handles the heavy lifting.
+## Quick Links
 
-<br />
+| Resource | Link |
+|----------|------|
+| **Live Application** | https://veda-ai-assessment-gold.vercel.app/ |
+| **Figma Design** | [VedaAI Hiring Assignment](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) |
+| **Setup Guide** | [SETUP.md](./SETUP.md) |
+
+---
 
 ## Table of Contents
 
-<table>
-<tr>
-<td valign="top" width="33%">
-
-### Getting Started
 - [Overview](#overview)
 - [Assessment Coverage](#assessment-coverage)
 - [Features](#features)
-- [Quick Start](#quick-start)
-
-</td>
-<td valign="top" width="33%">
-
-### Engineering
+- [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
-- [Architecture](#advanced-architecture)
-- [Approach](#approach--design-decisions)
+- [Approach & Design Decisions](#approach--design-decisions)
 - [Project Structure](#project-structure)
-
-</td>
-<td valign="top" width="33%">
-
-### Deep Dive
-- [AI Pipeline](#ai-generation-pipeline)
-- [Backend Architecture](#backend-reference-architecture)
+- [Getting Started](#getting-started)
+- [AI Generation Pipeline](#ai-generation-pipeline)
+- [Backend Reference Architecture](#backend-reference-architecture)
 - [Design Fidelity](#design-fidelity)
+- [Performance](#performance)
 - [Roadmap](#roadmap)
-
-</td>
-</tr>
-</table>
+- [License](#license)
 
 ---
 
 ## Overview
 
-**VedaAI Assessment Creator** is a full-stack web application designed for the **VedaAI Full Stack Engineering Assignment**. It empowers educators to:
+VedaAI Assessment Creator is a production-grade web application built strictly to the provided Figma designs. Teachers can:
 
-<table>
-<tr>
-<td><b>Create assignments</b> with rich, validated multi-step forms</td>
-</tr>
-<tr>
-<td><b>Generate AI-powered question papers</b> with structured prompts (sections, difficulty, marks)</td>
-</tr>
-<tr>
-<td><b>View beautifully formatted papers</b> that resemble real exam documents</td>
-</tr>
-<tr>
-<td><b>Download as PDF</b> with multi-page pagination via jsPDF + html2canvas</td>
-</tr>
-<tr>
-<td><b>Regenerate</b> papers with one click for unlimited variations</td>
-</tr>
-<tr>
-<td><b>Receive real-time updates</b> via simulated WebSocket connection</td>
-</tr>
-</table>
+1. **Create assignments** through a validated multi-step form
+2. **Generate AI-powered question papers** with structured prompts (sections, difficulty, marks)
+3. **View beautifully formatted papers** that resemble real exam documents
+4. **Download as PDF** with multi-page support
+5. **Regenerate** papers with one click for new variations
+6. **Receive real-time progress** via simulated WebSocket updates
 
-Built **pixel-perfectly** to the provided **Figma designs** with full mobile and desktop responsiveness.
-
-<br />
+The frontend is fully functional and deployed to Vercel. The backend (Node + Express + MongoDB + Redis + BullMQ + Socket.io) is documented as a reference architecture with production-ready code patterns.
 
 ---
 
 ## Assessment Coverage
 
-> Every requirement from the official assignment, tracked transparently.
->
-> ✅ Implemented · 🟡 Reference Architecture · ⭐ Bonus
+Every requirement from the official assignment brief, mapped transparently.
 
-<details open>
-<summary><b>1. Assignment Creation (Frontend)</b></summary>
+> **Legend:** ✅ Implemented · 🟡 Reference Architecture · ⭐ Bonus
 
-| # | Requirement | Status | Implementation |
-|---|-------------|:------:|----------------|
-| 1.1 | File upload (PDF / text) | ✅ | Drag-and-drop + browse, 10 MB limit, SVG dashed border |
-| 1.2 | Due date | ✅ | Native date picker, prevents past dates |
-| 1.3 | Question types | ✅ | 8 types: MCQ, Short, Long, T/F, Fill-in, Match, Case, A&R |
-| 1.4 | Number of questions + marks | ✅ | Per-type +/- steppers (1-20 each) |
-| 1.5 | Additional instructions | ✅ | Free-form textarea |
-| 1.6 | **Validation (no empty/negative)** | ✅ | Real-time field-level validation with error messages |
-| 1.7 | **Zustand state management** | ✅ | Single centralized store with typed actions |
-| 1.8 | **WebSocket management** | ✅ | Simulated WS lifecycle with 7-stage progress |
+### 1. Assignment Creation (Frontend)
 
-</details>
+| Requirement | Status | Implementation |
+|-------------|:------:|----------------|
+| File upload (PDF / text) | ✅ | Drag-and-drop + browse, 10 MB limit |
+| Due date | ✅ | Native date picker, prevents past dates |
+| Question types | ✅ | 8 types: MCQ, Short, Long, T/F, Fill-in, Match, Case, A&R |
+| Number of questions + marks | ✅ | Per-type +/- steppers (1-20 each) |
+| Additional instructions | ✅ | Free-form textarea |
+| Proper validation | ✅ | Real-time field-level validation |
+| Zustand state management | ✅ | Single centralized typed store |
+| WebSocket management | ✅ | Simulated WS with 7-stage live progress |
 
-<details open>
-<summary><b>2. AI Question Generation</b></summary>
+### 2. AI Question Generation
 
-| # | Requirement | Status | Implementation |
-|---|-------------|:------:|----------------|
-| 2.1 | Convert input → structured prompt | ✅ | `buildPrompt(formData)` function |
-| 2.2 | Generate sections (A, B, etc.) | ✅ | Auto-lettered sections per question type |
-| 2.3 | Generate questions | ✅ | Template-based with topic interpolation |
-| 2.4 | Difficulty (easy / medium / hard) | ✅ | Distribution algorithm across sections |
-| 2.5 | Marks assignment | ✅ | Per-question + section totals |
-| 2.6 | **Never render raw LLM** | ✅ | Always parsed through typed schema |
+| Requirement | Status | Implementation |
+|-------------|:------:|----------------|
+| Convert input → structured prompt | ✅ | `buildPrompt(formData)` function |
+| Generate sections (A, B, C…) | ✅ | Auto-lettered per question type |
+| Generate questions | ✅ | Template-based with topic interpolation |
+| Difficulty (easy / medium / hard) | ✅ | Distribution algorithm across sections |
+| Marks per question | ✅ | Per-question + section totals |
+| Never render raw LLM output | ✅ | Always parsed through typed schema |
 
-</details>
+### 3. Backend System (Reference Architecture)
 
-<details open>
-<summary><b>3. Backend System (Reference Architecture)</b></summary>
+| Requirement | Status | Notes |
+|-------------|:------:|-------|
+| Node.js + Express (TypeScript) | 🟡 | Full code in [SETUP.md](./SETUP.md) |
+| MongoDB → assignments & results | 🟡 | Mongoose schemas documented |
+| Redis → caching / job state | 🟡 | Cache pattern + BullMQ backend |
+| BullMQ → background jobs | 🟡 | Worker examples for generation + PDF |
+| WebSocket → real-time updates | 🟡 | Socket.io event flow |
 
-| # | Requirement | Status | Notes |
-|---|-------------|:------:|-------|
-| 3.1 | Node.js + Express (TypeScript) | 🟡 | Full folder structure + code samples in [SETUP.md](./SETUP.md#-step-6--backend-setup-optional) |
-| 3.2 | MongoDB → assignments & results | 🟡 | Mongoose schemas defined |
-| 3.3 | Redis → caching / job state | 🟡 | Cache pattern + BullMQ connection |
-| 3.4 | BullMQ → background jobs | 🟡 | Generation + PDF worker examples |
-| 3.5 | WebSocket → real-time updates | 🟡 | Socket.io event flow documented |
+### 4. Output Page (Enhanced)
 
-</details>
+| Requirement | Status |
+|-------------|:------:|
+| Student info (Name / Roll / Section) | ✅ |
+| Grouped sections with title & instruction | ✅ |
+| Question text + difficulty tag + marks | ✅ |
+| Clean exam-paper layout | ✅ |
+| Proper spacing & hierarchy | ✅ |
+| Mobile responsive | ✅ |
 
-<details open>
-<summary><b>4. Output Page (Enhanced)</b></summary>
+### Bonus Features
 
-| # | Requirement | Status |
-|---|-------------|:------:|
-| 4.1 | Student Info (Name / Roll / Section) | ✅ |
-| 4.2 | Grouped sections with title & instruction | ✅ |
-| 4.3 | Question text + difficulty + marks | ✅ |
-| 4.4 | Clean exam-paper layout | ✅ |
-| 4.5 | Mobile responsive | ✅ |
-| 4.6 | Proper spacing & hierarchy | ✅ |
-
-</details>
-
-<details open>
-<summary><b>⭐ Bonus Features (High Signal)</b></summary>
-
-| # | Feature | Status | Highlights |
-|---|---------|:------:|-----------|
-| B.1 | PDF download | ✅ | Multi-page, jsPDF + html2canvas, lazy-loaded |
-| B.2 | Action bar (Regenerate) | ✅ | One-click in AI banner |
-| B.3 | Difficulty badges | ✅ | Color-coded: green/amber/red |
-| B.4 | Loading state w/ progress | ✅ | 7-step animated progress bar |
-| B.5 | Empty state illustrations | ✅ | Figma-exact SVG embedded |
-| B.6 | Multi-step form | ✅ | Progress indicator + validation per step |
-| B.7 | Search & filter assignments | ✅ | Live search input |
-| B.8 | Pixel-perfect Figma match | ✅ | Every node reproduced |
-| B.9 | Mobile bottom nav | ✅ | Floating dark pill (Figma-exact) |
-| B.10 | Dark mode AI banner | ✅ | Matches Figma design |
-
-</details>
-
-<br />
+| Feature | Status |
+|---------|:------:|
+| ⭐ PDF download (jsPDF + html2canvas) | ✅ |
+| ⭐ Action bar (Regenerate) | ✅ |
+| ⭐ Difficulty badges (color-coded) | ✅ |
+| ⭐ Loading state with progress bar | ✅ |
+| ⭐ Empty state illustrations | ✅ |
+| ⭐ Multi-step form with progress | ✅ |
+| ⭐ Search & filter assignments | ✅ |
+| ⭐ Pixel-perfect Figma match | ✅ |
+| ⭐ Mobile bottom nav (Figma-exact) | ✅ |
 
 ---
 
@@ -197,306 +141,260 @@ Built **pixel-perfectly** to the provided **Figma designs** with full mobile and
 
 ### Multi-Step Assignment Wizard
 
-A two-step form designed for **speed and clarity**:
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
 **Step 1 — Assignment Details**
-- Drag-and-drop file upload
-- Due date selector
+- Drag-and-drop file upload with browse fallback
+- Due date selector (today minimum)
 - Subject + Grade dropdowns
 - Topic / Chapter input
 - Time allowed stepper
 - School name customization
 
-</td>
-<td width="50%" valign="top">
-
 **Step 2 — Question Configuration**
-- Dynamic question type rows (up to 6)
-- +/- steppers for count & marks
-- Difficulty preset selector
+- Add/remove question types dynamically (up to 6 sections)
+- Per-type controls for question count and marks
+- Difficulty preset (Easy / Mixed / Advanced)
 - Additional instructions
-- **Live summary** widget
+- Live summary widget (total questions, marks, sections, time)
 
-</td>
-</tr>
-</table>
+## AI Generation Pipeline
 
-### AI Question Generation Pipeline
+### End-to-End Flow
 
 ```
-User Input ──▶ buildPrompt() ──▶ LLM ──▶ Parse JSON ──▶ Validate ──▶ Render
-                                                  │
-                                          (Never render raw!)
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐     ┌───────────┐     ┌─────────┐
+│   Form      │────▶│  buildPrompt │────▶│   LLM API   │────▶│   Parse   │────▶│ Render  │
+│   Inputs    │     │   (structured│     │ (GPT/Claude)│     │ (Zod/TS)  │     │  (UI)   │
+│             │     │   JSON spec) │     │             │     │           │     │         │
+└─────────────┘     └──────────────┘     └─────────────┘     └───────────┘     └─────────┘
+                                                                     │
+                                                                     │ Reject malformed
+                                                                     ▼
+                                                              ┌──────────────┐
+                                                              │  Show error  │
+                                                              │  Retry / Fail│
+                                                              └──────────────┘
 ```
 
-- ✅ Structured prompts with sections, difficulty, and marks
-- ✅ Type-safe parsing with Zod-style schemas
-- ✅ Difficulty distribution algorithm (Easy → Medium → Hard)
-- ✅ 8 question type templates with topic interpolation
+- Structured prompts with sections, difficulty, and marks
+- Type-safe parsing through strict TypeScript interfaces
+- Difficulty distribution algorithm (Easy → Medium → Hard)
+- 8 question type templates with topic interpolation
 
-### Beautiful Question Paper Output
+### Question Paper Output
 
-- **School header** with class & subject
-- **Time allowed** & maximum marks
-- **Student info** with underline placeholders
-- **Sectioned layout** (Section A, B, C…)
-- **Color-coded difficulty badges**
-- **Marks per question** + section totals
-- **MCQ options** auto-rendered (a, b, c, d)
+- School + class header
+- Time allowed & maximum marks
+- Student info with underline placeholders
+- Sectioned layout (Section A, B, C…)
+- Color-coded difficulty badges (green / amber / red)
+- Marks per question + section totals
+- MCQ options auto-rendered (a, b, c, d)
 
 ### Export & Actions
 
-- **PDF Export**: Multi-page support via lazy-loaded `jsPDF` + `html2canvas`
-- **Regenerate**: Fresh variants with one click
-- **Delete**: With context menu
-- **Search & Filter**: Live filtering of assignments
+- **PDF Export** via lazy-loaded jsPDF + html2canvas (multi-page A4)
+- **Regenerate** for fresh paper variants
+- **Delete** with context menu
+- **Search & Filter** live filtering of assignments
 
 ### Real-Time WebSocket Updates
 
 ```
-[15%]   Connecting to AI engine...
-[30%]   Analyzing assignment parameters...
-[50%]    Generating question structure...
-[65%]   Creating questions by difficulty...
-[80%]   Formatting sections...
+[15%]  Connecting to AI engine...
+[30%]  Analyzing assignment parameters...
+[50%]  Generating question structure...
+[65%]  Creating questions by difficulty...
+[80%]  Formatting sections...
 [90%]  Validating question paper...
-[100%]  Question paper ready!
+[100%] Question paper ready
 ```
-
-<br />
 
 ---
 
-## Quick Start
+## Architecture
 
-> **Want detailed step-by-step instructions?** → See **[SETUP.md](./SETUP.md)** for VS Code setup, GitHub push, and Vercel deployment.
+### System Architecture
 
-### Prerequisites
-
-- Node.js **18+**
-- npm **9+**
-- Git
-
-### Install & Run
-
-```bash
-# Clone
-git clone https://github.com/manishpatel00/VedaAI-Assessment.git
-cd VedaAI-Assessment
-
-# Install
-npm install
-
-# Run dev server
-npm run dev
-# http://localhost:5173
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+```
+┌────────────────────────────────────────────────────────────────────┐
+│                                                                    │
+│                    CLIENT  (React 19 + TypeScript SPA)             │
+│                    Deployed: Vercel                                │
+│                                                                    │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │  Views Layer                                                 │  │
+│  │    Home  •  Assignments  •  Create  •  Output  •  Toolkit    │  │
+│  └──────────────────────────┬───────────────────────────────────┘  │
+│                             │                                      │
+│  ┌──────────────────────────▼───────────────────────────────────┐  │
+│  │  Component Layer                                             │  │
+│  │    Sidebar  •  Header  •  MobileHeader  •  MobileNav         │  │
+│  └──────────────────────────┬───────────────────────────────────┘  │
+│                             │                                      │
+│  ┌──────────────────────────▼────────────────────────────────────┐ │
+│  │  State Layer  (Zustand store)                                 │ │
+│  │    assignments[]  •  formData  •  ws state  •  progress       │ │
+│  └────────┬─────────────────┬───────────────────┬────────────────┘ │
+│           │                 │                   │                  │
+│  ┌────────▼────────┐  ┌─────▼──────┐   ┌───────▼──────────┐        │
+│  │ AI Generator    │  │ WS Manager │   │  PDF Exporter    │        │
+│  │ • buildPrompt() │  │ • simulate │   │ • lazy-loaded    │        │
+│  │ • parse JSON    │  │ • progress │   │ • multi-page A4  │        │
+│  │ • validate      │  │ • events   │   │ • jsPDF/canvas   │        │
+│  └─────────────────┘  └────────────┘   └──────────────────┘        │
+│                                                                    │
+└────────────────────────────────┬───────────────────────────────────┘
+                                 │
+                                 │  HTTPS / WSS
+                                 │
+┌────────────────────────────────▼───────────────────────────────────┐
+│                                                                    │
+│                  BACKEND  (Reference Architecture)                 │
+│                  Stack: Node + Express + TypeScript                │
+│                                                                    │
+│  ┌───────────────────────────────────────────────────────────────┐ │
+│  │  Express REST API                                             │ │
+│  │    POST   /api/assignments         → create + enqueue         │ │
+│  │    GET    /api/assignments         → list user's assignments  │ │
+│  │    GET    /api/assignments/:id     → get single (with paper)  │ │
+│  │    POST   /api/assignments/:id/regenerate                     │ │
+│  │    DELETE /api/assignments/:id                                │ │
+│  │    GET    /api/assignments/:id/pdf → server-side PDF          │ │
+│  └──────────────────────────┬────────────────────────────────────┘ │ 
+│                             │                                      │
+│           ┌─────────────────┼─────────────────┐                    │
+│           │                 │                 │                    │
+│  ┌────────▼────────┐  ┌─────▼──────┐  ┌──────▼─────────┐           │
+│  │  MongoDB        │  │   Redis    │  │  Socket.io     │           │
+│  │  (Mongoose)     │  │  • cache   │  │  • rooms by    │           │
+│  │  • Assignment   │  │  • BullMQ  │  │    assignmentId│           │
+│  │  • Paper        │  │    backend │  │  • progress    │           │
+│  │  • User         │  │            │  │  • completed   │           │
+│  └─────────────────┘  └─────┬──────┘  └────────────────┘           │
+│                             │                                      │
+│                       ┌─────▼──────────┐                           │
+│                       │  BullMQ Queue  │                           │
+│                       │  paper-gen     │                           │
+│                       │  pdf-export    │                           │
+│                       └─────┬──────────┘                           │
+│                             │                                      │
+│                  ┌──────────▼──────────┐                           │
+│                  │  Worker Process     │                           │
+│                  │  1. Pull job        │                           │
+│                  │  2. buildPrompt     │                           │
+│                  │  3. Call LLM API ───┼──────┐                    │
+│                  │  4. Validate (Zod)  │      │                    │
+│                  │  5. Save Mongo      │      │                    │
+│                  │  6. Emit WS event   │      ▼                    │
+│                  └─────────────────────┘  ┌─────────────────┐      │
+│                                           │   LLM Service   │      │
+│                                           │  OpenAI/Claude  │      │
+│                                           └─────────────────┘      │
+│                                                                    │
+└────────────────────────────────────────────────────────────────────┘
 ```
 
-### Deploy to Vercel (1-Click)
+### Request Flow (End-to-End)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/manishpatel00/VedaAI-Assessment)
+```
+[1]  Teacher submits the assignment form
+[2]  Frontend validates inputs locally (Zustand)
+[3]  POST /api/assignments         → returns { assignmentId, jobId }
+[4]  Worker picks job from BullMQ queue (Redis-backed)
+[5]  Worker builds structured prompt from form data
+[6]  Worker calls LLM API (GPT-4 or Claude)
+[7]  Worker parses + validates response (Zod schema)
+[8]  Worker writes paper to MongoDB
+[9]  Worker emits "paper:ready" event via Socket.io
+[10] Frontend WebSocket client receives event
+[11] Frontend fetches /api/assignments/:id
+[12] React renders the structured question paper
+[13] Teacher can download PDF or regenerate
+```
 
-<br />
+### Frontend Data Flow
+
+```
+        ┌──────────────────────┐
+        │  Form Component      │
+        │  (CreateAssignment)  │
+        └──────────┬───────────┘
+                   │ setFormData()
+                   ▼
+        ┌──────────────────────┐
+        │  Zustand Store       │◀─────┐
+        │  (single source)     │      │
+        └──────────┬───────────┘      │
+                   │                  │
+        createAssignment()            │ subscribe()
+                   │                  │
+                   ▼                  │
+        ┌──────────────────────┐      │
+        │  AI Generator        │      │
+        │  + WS Simulator      │      │
+        └──────────┬───────────┘      │
+                   │ updates          │
+                   ▼                  │
+        ┌──────────────────────┐      │
+        │  Generated Paper     │──────┘
+        │  (typed JSON)        │
+        └──────────┬───────────┘
+                   │
+                   ▼
+        ┌──────────────────────┐
+        │  ViewPaperView       │
+        │  (renders + PDF)     │
+        └──────────────────────┘
+```
 
 ---
 
 ## Tech Stack
 
-### Frontend (Implemented)
+### Frontend (Implemented & Deployed)
 
-| Layer | Technology | Why |
-|-------|------------|-----|
-| **Framework** | [React 19](https://react.dev/) | Latest concurrent features, automatic batching |
-| **Language** | [TypeScript 5.9](https://www.typescriptlang.org/) | End-to-end type safety |
-| **Build Tool** | [Vite 7.3](https://vitejs.dev/) | Lightning-fast HMR, ESM-native |
-| **Styling** | [Tailwind CSS 4.1](https://tailwindcss.com/) | Atomic, design-system friendly |
-| **State** | [Zustand](https://github.com/pmndrs/zustand) | Minimal, TS-first, no boilerplate |
-| **Icons** | [Lucide React](https://lucide.dev/) + Figma SVGs | Consistent + pixel-perfect |
-| **PDF** | [jsPDF](https://github.com/parallax/jsPDF) + [html2canvas](https://html2canvas.hertzen.com/) | Client-side PDF generation |
-| **Dates** | [date-fns](https://date-fns.org/) | Tree-shakeable, immutable |
-| **Toast** | [react-hot-toast](https://react-hot-toast.com/) | Beautiful notifications |
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| Framework | React 19 | UI library with latest concurrent features |
+| Language | TypeScript 5.9 | End-to-end type safety |
+| Build Tool | Vite 7.3 | Fast HMR, ESM-native bundler |
+| Styling | Tailwind CSS 4.1 | Utility-first, atomic design |
+| State | Zustand | Minimal, type-safe global state |
+| Icons | Custom SVG + Lucide | Pixel-perfect Figma reproduction |
+| PDF | jsPDF + html2canvas | Client-side PDF generation |
+| Dates | date-fns | Tree-shakeable date utilities |
+| Hosting | Vercel | Edge-deployed CDN with auto-deploys |
 
 ### Backend (Reference Architecture)
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
-| **Runtime** | [Node.js 20+](https://nodejs.org/) | JavaScript runtime |
-| **Framework** | [Express 4](https://expressjs.com/) | REST API |
-| **Database** | [MongoDB 7](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/) | Document store for assignments |
-| **Cache** | [Redis 7](https://redis.io/) | Caching + BullMQ backend |
-| **Queue** | [BullMQ](https://docs.bullmq.io/) | Background job processing |
-| **Realtime** | [Socket.io](https://socket.io/) | WebSocket events |
-| **AI** | [OpenAI](https://platform.openai.com/) / [Anthropic Claude](https://www.anthropic.com/) | LLM provider |
-| **Validation** | [Zod](https://zod.dev/) | Runtime schema validation |
-
-### DevOps & Tooling
-
-| Tool | Purpose |
-|------|---------|
-| **Vercel** | Frontend hosting + CDN |
-| **GitHub Actions** | CI/CD pipelines |
-| **MongoDB Atlas** | Managed database |
-| **Upstash Redis** | Serverless Redis |
-| **Docker** | Local dev environment |
-
-<br />
-
----
-
-## Advanced Architecture
-
-### Frontend Architecture (React + Zustand)
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      VedaAI SPA (Vite)                      │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Views Layer                                                │
-│  ├─ Home (Welcome + stats)                                  │
-│  ├─ Assignments (List + search/filter)                      │
-│  ├─ Create (2-step form with validation)                    │
-│  ├─ ViewPaper (Question paper display)                      │
-│  └─ AIToolkit (Playground)                                  │
-│                                                             │
-│  Components Layer (Reusable)                                │
-│  ├─ Sidebar (Desktop nav + logo)                            │
-│  ├─ Header (Breadcrumb + actions)                           │
-│  ├─ MobileHeader + MobileNav (Responsive)                   │
-│  ├─ AssignmentCard (Grid display)                           │
-│  └─ FormSteps (Multi-step wizard)                           │
-│                                                             │
-│  State Management (Zustand)                                 │
-│  ├─ assignments[] (Full list)                               │
-│  ├─ selectedAssignment (Active)                             │
-│  ├─ formData (Multi-step form state)                        │
-│  ├─ isGenerating (Progress tracking)                        │
-│  ├─ progressSteps[] (7-stage WS sim)                        │
-│  └─ helpers (CRUD + generation)                             │
-│                                                             │
-│  Utilities & Helpers                                        │
-│  ├─ AI Generator (buildPrompt → parse → validate)           │
-│  ├─ PDF Exporter (jsPDF + html2canvas)                      │
-│  └─ WebSocket Simulator (Realistic progress)                │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-            │
-            │ REST API + WebSocket
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│                   Backend (Optional Deployment)              │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│  HTTP Layer (Express + TypeScript)                           │
-│  ├─ POST   /api/assignments (Create + queue)                 │
-│  ├─ GET    /api/assignments (List)                           │
-│  ├─ GET    /api/assignments/:id (Fetch single)               │
-│  ├─ POST   /api/assignments/:id/regenerate (Re-queue)        │
-│  ├─ DELETE /api/assignments/:id (Remove)                     │
-│  └─ GET    /api/assignments/:id/pdf (Server export)          │
-│                                                              │
-│  Job Queue Layer (BullMQ + Redis)                            │
-│  ├─ paper-generation queue                                   │
-│  ├─ pdf-export queue                                         │
-│  └─ 7-step progress tracking                                 │
-│                                                              │
-│  AI Integration (LLM Handler)                                │
-│  ├─ buildPrompt(formData) → structured prompt                │
-│  ├─ callLLM(prompt) → JSON response                          │
-│  └─ validatePaper(response) → typed schema                   │
-│                                                              │
-│  Database Layer                                              │
-│  ├─ MongoDB (Assignments + Papers)                           │
-│  ├─ Redis (Cache + BullMQ backend)                           │
-│  └─ Connection pooling + retries                             │
-│                                                              │
-│  Real-Time Layer (Socket.io)                                 │
-│  ├─ connection event (handshake)                             │
-│  ├─ progress event (7 stages with % + message)               │
-│  ├─ completed event (paper ready)                            │
-│  └─ error event (fallback handling)                          │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### Data Flow & Request Lifecycle
-
-```
-User submits form
-  ↓
-Frontend validation (Zod schemas)
-  ↓
-Zustand dispatch (setFormData)
-  ↓
-POST /api/assignments { formData }
-  ↓ [Backend]
-  ├─ Create Assignment doc (status: 'generating')
-  ├─ Add to BullMQ queue
-  └─ Return { assignmentId, jobId }
-  ↓ [Frontend]
-  ├─ Store in Zustand
-  ├─ Start WebSocket simulation
-  └─ Display 7-stage progress
-  ↓ [Worker - Async]
-  ├─ buildPrompt(formData)
-  ├─ Emit WS: progress (15%)
-  ├─ callLLM(prompt) → raw JSON
-  ├─ Emit WS: progress (50%)
-  ├─ ParsePaper(JSON) → validated schema
-  ├─ Emit WS: progress (80%)
-  ├─ Save to MongoDB
-  ├─ Emit WS: completed { paper }
-  └─ Clear job from queue
-  ↓ [Frontend]
-  ├─ Receive completed event
-  ├─ fetchAssignment(assignmentId)
-  ├─ Render ViewPaper component
-  └─ Enable regenerate + PDF export
-```
-
-### Scaling Considerations
-
-| Layer | Strategy | Notes |
-|-------|----------|-------|
-| **Frontend** | CDN + lazy-load | Vite build to Vercel CF |
-| **API** | Horizontal scaling | Express behind load balancer |
-| **Queue** | Redis cluster | Multiple BullMQ workers |
-| **Database** | MongoDB Atlas replica set | Auto-sharding at scale |
-| **Cache** | Redis + CDN headers | Assignment list caching |
-| **AI** | Rate limiting + circuit breaker | Prevent LLM cost overages |
-
-<br />
+| Runtime | Node.js 20+ | Server runtime |
+| Framework | Express 4 (TypeScript) | REST API |
+| Database | MongoDB 7 + Mongoose | Document store for assignments |
+| Cache | Redis 7 | Cache + BullMQ backend |
+| Queue | BullMQ | Background job processing |
+| Realtime | Socket.io | WebSocket events for live progress |
+| AI | OpenAI GPT-4 / Anthropic Claude | LLM provider |
+| Validation | Zod | Runtime schema validation |
 
 ---
 
 ## Approach & Design Decisions
 
-### 1 Why Zustand over Redux?
+### Why Zustand over Redux?
 
-| Criterion | Zustand | Redux Toolkit |
-|-----------|:-------:|:-------------:|
-| Boilerplate | ⭐⭐⭐⭐⭐ Minimal | ⭐⭐ Moderate |
-| TypeScript DX | ⭐⭐⭐⭐⭐ First-class | ⭐⭐⭐⭐ Good |
-| Bundle size | **~1 KB** | ~10 KB |
-| Provider needed | ❌ No | ✅ Yes |
-| Async actions | ⭐⭐⭐⭐⭐ Native | ⭐⭐⭐ Thunks |
-| Selectors | ✅ Built-in | ✅ Reselect |
+Chose Zustand for its minimal API surface and TypeScript-first ergonomics:
 
-**Conclusion:** Zustand for this scale = perfect choice.
+- ~1 KB bundle size (vs ~10 KB for Redux Toolkit)
+- No provider needed (works anywhere)
+- Native async actions without thunk middleware
+- Co-located state and actions in a single file
+- Easier mental model for this scale of application
 
-### 2 Type-Safe AI Contract
+### Type-Safe AI Contract
 
-The frontend **never trusts raw LLM output**. Every response goes through strict validation:
+The frontend **never** trusts raw LLM output. Every response is parsed through strict TypeScript interfaces:
 
 ```typescript
 interface GeneratedPaper {
@@ -513,8 +411,8 @@ interface GeneratedPaper {
 
 interface Section {
   id: string;
-  title: string;      // "Section A"
-  subtitle: string;   // "Short Answer Questions"
+  title: string;       // "Section A"
+  subtitle: string;    // "Short Answer Questions"
   instruction: string;
   questions: Question[];
   totalMarks: number;
@@ -529,7 +427,11 @@ interface Question {
 }
 ```
 
-### 3 Prompt Engineering
+In the reference backend, this same schema is enforced via Zod at the worker boundary — any malformed LLM response is rejected before it reaches the database.
+
+### Prompt Engineering
+
+Form inputs are transformed into a structured prompt that constrains the LLM to return predictable JSON:
 
 ```typescript
 const buildPrompt = (form: AssignmentFormData) => `
@@ -552,90 +454,53 @@ ${form.questionTypes.map((qt, i) => `
 
 Additional instructions: ${form.instructions || 'None'}
 
-Return ONLY valid JSON matching this schema:
-{
-  "sections": [{
-    "title": "Section A",
-    "subtitle": "Short Answer Questions",
-    "instruction": "Attempt all questions",
-    "questions": [{
-      "text": "...",
-      "difficulty": "easy" | "medium" | "hard",
-      "marks": number
-    }]
-  }],
-  "maximumMarks": number,
-  "generalInstructions": "..."
-}
+Return ONLY valid JSON matching the GeneratedPaper schema.
 `;
 ```
 
-### 4 WebSocket Lifecycle Management
+### WebSocket Lifecycle
 
-The frontend ships with a **realistic WebSocket simulator** that mimics real behavior:
+The frontend ships with a realistic WebSocket simulator that mimics real Socket.io behavior:
 
-```typescript
-function simulateWebSocket(onProgress, onComplete) {
-  const steps = [{ progress: 15, status: 'Connecting to AI engine...' },
-    { progress: 30, status: 'Analyzing assignment parameters...' },
-    { progress: 50, status: 'Generating question structure...' },
-    { progress: 65, status: 'Creating questions by difficulty...' },
-    { progress: 80, status: 'Formatting sections...' },
-    { progress: 90, status: 'Validating question paper...' },
-    { progress: 100, status: 'Question paper ready!' },
-  ];
+- 7-stage progress events at 600ms intervals
+- Updates store reactively (no manual subscriptions)
+- Clean connection lifecycle (connect → updates → complete → disconnect)
+- One-line swap to real `socket.io-client` when backend is live
 
-  let i = 0;
-  const interval = setInterval(() => {
-    if (i < steps.length) {
-      onProgress(steps[i].progress, steps[i].status);
-      i++;
-    } else {
-      clearInterval(interval);
-      onComplete();
-    }
-  }, 600);
-}
-```
+### Difficulty Distribution Algorithm
 
-**To swap for real Socket.io:** Single-line change in `useAssignmentStore.ts`.
-
-### 5 Difficulty Distribution Algorithm
+Questions within each section are distributed by difficulty using their position index:
 
 ```typescript
 function getDifficultyForIndex(index: number, total: number): Difficulty {
   const ratio = index / total;
-  if (ratio < 0.4)  return 'easy';      // First 40% = Easy
-  if (ratio < 0.75) return 'medium';    // Next 35%  = Medium
-  return 'hard';                         // Last 25%  = Hard
+  if (ratio < 0.4)  return 'easy';     // First 40% — warmup
+  if (ratio < 0.75) return 'medium';   // Next 35%  — core
+  return 'hard';                        // Last 25%  — challenge
 }
 ```
 
-### 6 Lazy-Loaded PDF Generation
+### Lazy-Loaded PDF Generation
 
-PDF libraries are loaded **only when needed** (saves ~400 KB on initial bundle):
+PDF libraries are imported dynamically only when the user clicks "Download" — keeping the initial bundle ~400 KB lighter:
 
 ```typescript
 const handleDownloadPDF = async () => {
   const { default: html2canvas } = await import('html2canvas');
   const { default: jsPDF } = await import('jspdf');
-  // ... generate PDF
+  // ... generate multi-page PDF
 };
 ```
 
-### 7 Pixel-Perfect Figma Implementation
+### Pixel-Perfect Figma Implementation
 
-Every Figma node was extracted and reproduced with care:
+Every Figma node was extracted as raw SVG and reproduced in code:
 
-| Figma Asset | Implementation |
-|-------------|----------------|
-| VedaAI Logo | Exact gradient SVG (`#E56820 → #D45E3E`) |
-| Sidebar Create Button | Gradient-bordered pill with quadruple shadow |
-| Mobile Bottom Nav | Floating dark pill (`#181818`) with custom icons |
-| File Upload Border | SVG-rendered dashed border (truer than CSS borders) |
-| Empty State | Direct Figma SVG embed (magnifying glass + doodles) |
-
-<br />
+- VedaAI logo gradient (`#E56820 → #D45E3E`) with dual chevron paths
+- Sidebar "Create Assignment" button with quadruple-layered shadow filter
+- Mobile bottom nav as floating dark pill with custom icons
+- File upload dashed border rendered via inline SVG (truer than CSS `border-dashed`)
+- Empty state illustration embedded directly from Figma export
 
 ---
 
@@ -643,69 +508,100 @@ Every Figma node was extracted and reproduced with care:
 
 ```
 VedaAI-Assessment/
-├── public/                          # Static assets (favicons, OG images)
+├── public/                         Static assets
 │
 ├── src/
-│   ├── components/                  # Reusable UI components
-│   │   ├── Sidebar.tsx             # Desktop sidebar with Figma-exact logo
-│   │   ├── Header.tsx              # Desktop top header (notifications, profile)
-│   │   ├── MobileHeader.tsx        # Mobile header (logo + bell + avatar)
-│   │   └── MobileNav.tsx           # Bottom nav floating pill
+│   ├── components/                 Reusable UI components
+│   │   ├── Sidebar.tsx             Desktop sidebar (Figma-exact logo)
+│   │   ├── Header.tsx              Desktop top header
+│   │   ├── MobileHeader.tsx        Mobile header (logo + bell + avatar)
+│   │   └── MobileNav.tsx           Bottom nav floating pill
 │   │
-│   ├── views/                       # Page-level views (route equivalents)
-│   │   ├── HomeView.tsx            # Dashboard with stats & quick actions
-│   │   ├── AssignmentsView.tsx     # List view with empty state
-│   │   ├── CreateAssignmentView.tsx # 2-step form wizard
-│   │   ├── ViewPaperView.tsx       # Question paper output + PDF download
-│   │   └── AIToolkitView.tsx       # AI tools showcase
+│   ├── views/                      Page-level views
+│   │   ├── HomeView.tsx            Dashboard with stats
+│   │   ├── AssignmentsView.tsx     List view with empty state
+│   │   ├── CreateAssignmentView.tsx  Two-step form wizard
+│   │   ├── ViewPaperView.tsx       Question paper output + PDF
+│   │   └── AIToolkitView.tsx       AI tools showcase
 │   │
-│   ├── store/                       # Zustand state management
-│   │   └── useAssignmentStore.ts  # Single source of truth
+│   ├── store/
+│   │   └── useAssignmentStore.ts   Zustand: single source of truth
 │   │
 │   ├── utils/
-│   │   └── cn.ts                   # className merger (clsx + tailwind-merge)
+│   │   └── cn.ts                   className merger
 │   │
-│   ├── App.tsx                     # Root component (view router)
-│   ├── main.tsx                     # React entry point
-│   └── index.css                    # Tailwind + global styles
+│   ├── App.tsx                     Root component (view router)
+│   ├── main.tsx                    React entry point
+│   └── index.css                   Tailwind + globals
 │
-├── .env.example                     # Environment template
-├── .gitignore                       # Git exclusions
-├── index.html                       # HTML shell
-├── package.json                     # Dependencies & scripts
-├── tsconfig.json                   # TypeScript config
-├── vite.config.ts                  # Vite build config
-├── tailwind.config.js               # Tailwind theme
-├── vercel.json                      # Vercel deployment config
-├── README.md                        # You are here
-├── SETUP.md                        # Complete setup guide
-└── LICENSE                          # MIT license
+├── .env.example                    Environment template
+├── .gitignore
+├── index.html                      HTML shell
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── vercel.json                     Deployment + security headers
+├── README.md                       This file
+├── SETUP.md                        Complete setup guide
+└── LICENSE                         MIT
 ```
 
-<br />
+---
+
+## Getting Started
+
+> For a complete walkthrough including VS Code setup, GitHub push, and Vercel deployment, see [SETUP.md](./SETUP.md).
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+- Git
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/manishpatel00/VedaAI-Assessment.git
+cd VedaAI-Assessment
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+# → http://localhost:5173
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Environment Variables
+
+Copy `.env.example` to `.env`:
+
+```bash
+VITE_API_URL=http://localhost:4000
+VITE_WS_URL=ws://localhost:4000
+VITE_OPENAI_API_KEY=sk-...      # Optional: only if calling LLM from client
+```
+
+### Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start Vite dev server with HMR |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build locally |
 
 ---
 
 ## AI Generation Pipeline
 
-### End-to-End Flow
-
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐     ┌───────────┐     ┌─────────┐
-│   Form      │────▶│  buildPrompt │────▶│   LLM API   │────▶│   Parse   │────▶│ Render  │
-│   Inputs    │     │   (structured│     │ (GPT/Claude)│     │ (Zod/TS)  │     │  (UI)   │
-│             │     │   JSON spec) │     │             │     │           │     │         │
-└─────────────┘     └──────────────┘     └─────────────┘     └───────────┘     └─────────┘
-                                                                     │
-                                                                     │ Reject malformed
-                                                                     ▼
-                                                              ┌──────────────┐
-                                                              │  Show error  │
-                                                              │  Retry / Fail│
-                                                              └──────────────┘
-```
-
-### Sample Generated Output (Frontend)
+### Sample Generated Output
 
 ```json
 {
@@ -716,7 +612,8 @@ VedaAI-Assessment/
   "timeAllowed": 45,
   "maximumMarks": 20,
   "generalInstructions": "All questions are compulsory unless stated otherwise.",
-  "sections": [{
+  "sections": [
+    {
       "id": "section-A",
       "title": "Section A",
       "subtitle": "Multiple Choice Questions",
@@ -733,18 +630,15 @@ VedaAI-Assessment/
       ]
     }
   ],
-  "createdAt": "2026-01-09T12:00:00Z",
-  "aiMessage": "Certainly! Here are customized Question Papers..."
+  "createdAt": "2026-01-09T12:00:00Z"
 }
 ```
-
-<br />
 
 ---
 
 ## Backend Reference Architecture
 
-> The full backend code blueprints are documented in **[SETUP.md → Step 6](./SETUP.md#-step-6--backend-setup-optional)**.
+Full implementation blueprints are documented in [SETUP.md](./SETUP.md#-step-6--backend-setup-optional). Key patterns:
 
 ### MongoDB Schema
 
@@ -765,19 +659,7 @@ const AssignmentSchema = new Schema({
 }, { timestamps: true });
 ```
 
-### REST API Endpoints
-
-| Method | Endpoint | Purpose |
-|:------:|----------|---------|
-| `POST` | `/api/assignments` | Create + queue generation |
-| `GET`  | `/api/assignments` | List user's assignments |
-| `GET`  | `/api/assignments/:id` | Get single (with paper) |
-| `POST` | `/api/assignments/:id/regenerate` | Re-queue generation |
-| `DELETE` | `/api/assignments/:id` | Delete |
-| `GET`  | `/api/assignments/:id/pdf` | Server-side PDF |
-| `GET`  | `/health` | Health check |
-
-### BullMQ Worker Example
+### BullMQ Worker
 
 ```typescript
 const worker = new Worker('paper-generation', async (job) => {
@@ -799,27 +681,24 @@ const worker = new Worker('paper-generation', async (job) => {
 }, { connection: redis });
 ```
 
-### Redis Caching Strategy
+### Redis Caching
 
 ```typescript
-// Cache LLM responses for identical inputs (5-minute TTL)
+// Cache identical prompts for 5 minutes
 const cacheKey = `paper:${hashFormData(formData)}`;
 const cached = await redis.get(cacheKey);
 if (cached) return JSON.parse(cached);
 
 const result = await callLLM(prompt);
 await redis.setex(cacheKey, 300, JSON.stringify(result));
-return result;
 ```
 
-### Socket.io Real-Time
+### Socket.io Events
 
 ```typescript
 // Server
 io.on('connection', (socket) => {
-  socket.on('subscribe', (assignmentId) => {
-    socket.join(assignmentId);
-  });
+  socket.on('subscribe', (assignmentId) => socket.join(assignmentId));
 });
 
 // Client
@@ -829,213 +708,69 @@ socket.on('progress', ({ progress, status }) => updateProgress(progress, status)
 socket.on('completed', ({ paper }) => onPaperReady(paper));
 ```
 
-<br />
-
 ---
 
 ## Design Fidelity
 
-Every screen was reproduced **pixel-by-pixel** from the official Figma file.
+Every screen was reproduced from the official Figma file.
 
-<table>
-<tr><th>Component</th><th>Figma → Code Notes</th></tr>
-<tr>
-<td><b>VedaAI Logo</b></td>
-<td>Exact orange gradient (<code>#E56820 → #D45E3E</code>) with dual chevron paths + dark overlay</td>
-</tr>
-<tr>
-<td><b>Create Assignment Btn</b></td>
-<td>Gradient border ring + dark <code>#272727</code> pill + quadruple-layered shadows</td>
-</tr>
-<tr>
-<td><b>Mobile Header</b></td>
-<td>Floating white card with bell icon, profile avatar, hamburger menu</td>
-</tr>
-<tr>
-<td><b>Mobile Bottom Nav</b></td>
-<td>Black <code>#181818</code> floating pill with custom Figma SVG icons (Home, Calendar, Library, Sparkles)</td>
-</tr>
-<tr>
-<td><b>File Upload Area</b></td>
-<td>SVG-rendered dashed border with exact <code>stroke-dasharray="8 8"</code></td>
-</tr>
-<tr>
-<td><b>Empty State</b></td>
-<td>Full Figma illustration (magnifying glass + document + doodles + cloud card)</td>
-</tr>
-<tr>
-<td><b>Question Cards</b></td>
-<td>Underlined title, dotted layout, 3-dot context menu (View / Delete)</td>
-</tr>
-<tr>
-<td><b>AI Banner</b></td>
-<td>Dark <code>#1a1a1a</code> rounded card with white Download + dark Regenerate pills</td>
-</tr>
-<tr>
-<td><b>Sidebar Settings + Profile</b></td>
-<td>Gear icon + school avatar card with name & city</td>
-</tr>
-</table>
-
-<br />
+| Component | Implementation Notes |
+|-----------|---------------------|
+| VedaAI Logo | Exact orange gradient (`#E56820 → #D45E3E`) with dual chevron paths |
+| Create Assignment Button | Gradient border ring + dark `#272727` fill + quadruple-layered shadows |
+| Mobile Bottom Nav | Black `#181818` floating pill with custom Figma SVG icons |
+| File Upload Area | SVG-rendered dashed border with exact `stroke-dasharray="8 8"` |
+| Empty State | Full Figma illustration (magnifying glass + document + doodles) |
+| Question Cards | Underlined title, dotted divider, 3-dot context menu |
+| AI Banner | Dark `#1a1a1a` rounded card with Download + Regenerate pills |
+| Mobile Header | Floating white card with bell + profile + hamburger |
 
 ---
 
-## Responsive Behavior
+## Performance
 
-| Breakpoint | Width | Layout |
-|------------|-------|--------|
-| **Mobile** | `< 768px` | Single column, floating bottom nav, sub-page headers |
-| **Tablet** | `768px – 1024px` | 2-column cards, floating nav |
-| **Desktop** | `≥ 1024px` | Fixed sidebar (304px), multi-column grids, top header |
-
-### Mobile-Specific Features
-
-- Adaptive sub-page header (with back arrow + title)
-- Bottom nav with safe-area padding for iOS notch
-- FAB button positioned above mobile nav
-- Single → 2-column card grid at `md` breakpoint
-- Compact filter bar on mobile, expanded on desktop
-
-<br />
-
----
-
-## Performance Optimizations
+### Optimization Techniques
 
 | Technique | Impact |
 |-----------|--------|
-| **Code splitting** | PDF libraries lazy-loaded → -400 KB initial bundle |
-| **Single-file build** | Everything inlined → 1 HTTP request |
-| **Tailwind JIT** | Only used utilities compiled → smaller CSS |
-| **Zustand selectors** | Minimize re-renders |
-| **Vite production minification** | ~327 KB gzipped total |
-| **SVG over PNG** | Crisp at all sizes, smaller than images |
-| **Image-free design** | Zero external image requests |
+| Code splitting | PDF libraries lazy-loaded (saves ~400 KB initial) |
+| Single-file build | Everything inlined into one HTML file |
+| Tailwind JIT | Only used utilities compiled |
+| Zustand selectors | Minimize component re-renders |
+| Vite minification | ~329 KB gzipped total |
+| SVG over PNG | Crisp at all sizes, smaller than images |
+| Image-free design | Zero external image requests |
 
-### Lighthouse Scores (Target)
+### Production Bundle
 
-| Metric | Score |
-|--------|:-----:|
-| Performance | 95+ |
-| Accessibility | 95+ |
-| Best Practices | 100 |
-| SEO | 95+ |
-
-<br />
-
----
-
-## Testing
-
-### Manual Test Checklist
-
-- [x] Create assignment with empty fields → validation errors shown
-- [x] Negative question counts → blocked
-- [x] File upload (drag-drop + browse) works
-- [x] Date picker prevents past dates
-- [x] AI generation progress updates live
-- [x] Generated paper renders all sections
-- [x] PDF download produces valid multi-page file
-- [x] Regenerate produces different paper
-- [x] Delete removes from list
-- [x] Search filters assignments correctly
-- [x] Mobile nav switches views
-- [x] Sub-page mobile header back button works
-
-### Recommended Test Setup (Future)
-
-```bash
-npm install -D vitest @testing-library/react @testing-library/jest-dom @vitest/ui
 ```
-
-Example test:
-
-```typescript
-import { renderHook, act } from '@testing-library/react';
-import { useAssignmentStore } from './store/useAssignmentStore';
-
-test('createAssignment adds to list and starts generation', async () => {
-  const { result } = renderHook(() => useAssignmentStore());
-
-  act(() => result.current.setFormData({
-    title: 'Test',
-    subject: 'Math',
-    grade: '8th'
-  }));
-
-  await act(() => result.current.createAssignment());
-
-  expect(result.current.assignments).toHaveLength(4); // 3 samples + 1 new
-  expect(result.current.isGenerating).toBe(true);
-});
+dist/index.html       1,114 KB   (uncompressed)
+                        329 KB   (gzipped)
 ```
-
-<br />
 
 ---
 
 ## Roadmap
 
-### v1.1 — Real Backend (Q2 2026)
-- [ ] Real OpenAI / Claude integration
-- [ ] Server-side PDF generation (Puppeteer)
-- [ ] Authentication (Clerk / Auth.js)
+### v1.1 — Real Backend Integration
+- [ ] OpenAI / Claude API integration
+- [ ] Server-side PDF generation with Puppeteer
+- [ ] User authentication (Clerk / Auth.js)
 - [ ] Multi-tenant school accounts
-- [ ] Student submission portal
 
-### v1.2 — AI Grading (Q3 2026)
-- [ ] AI grading & feedback
+### v1.2 — AI Grading & Insights
+- [ ] AI-powered answer grading with feedback
 - [ ] Plagiarism checker
-- [ ] LaTeX support for math/physics
+- [ ] LaTeX support for math/physics questions
 - [ ] Image upload in questions
-- [ ] Question bank with reusable templates
 - [ ] Analytics dashboard
 
-### v2.0 — Mobile & Beyond (2027)
+### v2.0 — Platform Expansion
 - [ ] React Native mobile app
 - [ ] Offline-first with local LLM (Ollama)
 - [ ] Voice-based question creation
-- [ ] AR/VR exam proctoring
 - [ ] Adaptive difficulty per student
-- [ ] Multi-language support
-
-<br />
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feat/amazing-feature`
-3. Commit your changes: `git commit -m 'feat: add amazing feature'`
-4. Push to the branch: `git push origin feat/amazing-feature`
-5. Open a Pull Request
-
-### Commit Convention
-
-```
-feat:     New feature
-fix:      Bug fix
-docs:     Documentation only
-style:    Formatting (no code change)
-refactor: Code restructure
-test:     Adding tests
-chore:    Maintenance
-perf:     Performance improvement
-```
-
-### Code Style
-
-- ✅ TypeScript strict mode
-- ✅ Tailwind for all styling (avoid inline styles)
-- ✅ Component files in PascalCase
-- ✅ Use `cn()` for conditional classes
-- ✅ Match Figma designs pixel-perfectly
-
-<br />
+- [ ] Multi-language question generation
 
 ---
 
@@ -1043,48 +778,12 @@ perf:     Performance improvement
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-<br />
-
----
-
-## Acknowledgments
-
-- **[VedaAI Team](https://vedaai.com/)** for the thoughtful assignment design
-- **[Figma Community](https://www.figma.com/community)** for excellent design tooling
-- **[Vercel](https://vercel.com/)** for inspiration on developer experience
-- **Open Source Community** for amazing tools (React, Vite, Tailwind, Zustand)
-
-<br />
-
----
-
-## Additional Resources
-
-| Resource | Description |
-|----------|-------------|
-| [SETUP.md](./SETUP.md) | Complete VS Code + GitHub + Vercel setup guide |
-| [LICENSE](./LICENSE) | MIT License text |
-| [Figma Design](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) | Original design file |
-| [Assignment Brief](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform) | Submission form |
-
-<br />
-
 ---
 
 <div align="center">
 
-### Built for the **VedaAI Full Stack Engineering Assignment**
+**Built for the VedaAI Full Stack Engineering Assignment**
 
-<br />
-
-**[Back to Top](#vedaai--ai-assessment-creator)** · **[Setup Guide](./SETUP.md)** · **[Live Demo](https://veda-ai-assessment-gold.vercel.app/)**
-
-<br />
-
-<br />
-
-<img src="https://img.shields.io/badge/Made_with-React_%2B_TypeScript_%2B_Tailwind-FF5623?style=for-the-badge" />
-
-<br />
+[Live Demo](https://veda-ai-assessment-gold.vercel.app/) · [GitHub](https://github.com/manishpatel00/VedaAI-Assessment) · [Setup Guide](./SETUP.md)
 
 </div>
