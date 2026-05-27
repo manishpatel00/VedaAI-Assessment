@@ -25,7 +25,7 @@
 
 <br />
 
-[**🚀 Live Demo**](#) · [**🎨 Figma Design**](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) · [**⚙️ Setup Guide**](./SETUP.md) · [**📝 Submit Assignment**](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform)
+[**🚀 Live Demo**](https://veda-ai-assessment-gold.vercel.app/) · [**📦 GitHub Repository**](https://github.com/manishpatel00/VedaAI-Assessment) · [**🎨 Figma Design**](https://www.figma.com/design/nB2HMm1BhTpmHcHrmEslGB/VedaAI---Hiring-Assignment) · [**⚙️ Setup Guide**](./SETUP.md)
 
 <br />
 
@@ -359,74 +359,127 @@ npm run preview
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Advanced Architecture
 
-### System Overview
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                        VedaAI Frontend (SPA)                     │
-│                                                                  │
-│  ┌────────────────────────────────────────────────────────────┐ │
-│  │  Views Layer                                                │ │
-│  │  Home · Assignments · Create · ViewPaper · AI Toolkit       │ │
-│  └────────────────────────────┬────────────────────────────────┘ │
-│                               │                                  │
-│  ┌────────────────────────────▼────────────────────────────────┐ │
-│  │  Components Layer                                            │ │
-│  │  Sidebar · Header · MobileHeader · MobileNav                 │ │
-│  └────────────────────────────┬────────────────────────────────┘ │
-│                               │                                  │
-│  ┌────────────────────────────▼────────────────────────────────┐ │
-│  │  State Layer (Zustand)                                       │ │
-│  │  assignments · formData · isGenerating · progress · ws       │ │
-│  └────────────────────────────┬────────────────────────────────┘ │
-│                               │                                  │
-│  ┌─────────────┬──────────────┴───────────┬─────────────────┐  │
-│  │ AI Generator│  WebSocket Simulator      │  PDF Exporter   │  │
-│  │ (Prompt →   │  (7-step progress)        │  (jsPDF +       │  │
-│  │  Parse →    │                            │   html2canvas)  │  │
-│  │  Validate)  │                            │                 │  │
-│  └─────────────┴───────────────────────────┴─────────────────┘  │
-└───────────────────────────────┬──────────────────────────────────┘
-                                │  REST + WebSocket
-                                │
-┌───────────────────────────────▼──────────────────────────────────┐
-│                Backend (Reference Architecture)                  │
-│                                                                  │
-│  ┌──────────────┐   ┌──────────────┐   ┌─────────────────────┐ │
-│  │  Express API │──▶│  BullMQ      │──▶│  Worker             │ │
-│  │              │   │  (Redis)     │   │  ┌───────────────┐  │ │
-│  │ POST /assign │   │              │   │  │ Build prompt  │  │ │
-│  │ GET  /assign │   │              │   │  │ Call LLM      │  │ │
-│  │ DELETE /...  │   │              │   │  │ Parse JSON    │  │ │
-│  └──────┬───────┘   └──────────────┘   │  │ Save to Mongo │  │ │
-│         │                                │  │ Emit WS event │  │ │
-│         ▼                                │  └───────┬───────┘  │ │
-│   ┌───────────┐                          └──────────┼──────────┘ │
-│   │  MongoDB  │◀─────────────────────────────────────┘            │
-│   │   Atlas   │                                                   │
-│   └───────────┘                                                   │
-│                                                                   │
-│   ┌───────────┐                                                  │
-│   │  Socket.io│──▶ Real-time progress to frontend                │
-│   └───────────┘                                                  │
-└───────────────────────────────────────────────────────────────────┘
-```
-
-### Request Flow (Full Stack)
+### Frontend Architecture (React + Zustand)
 
 ```
-1. User submits form           ──▶ Frontend validates fields
-2. POST /api/assignments       ──▶ Returns { jobId, assignmentId }
-3. Job added to BullMQ queue   ──▶ Redis stores job state
-4. Worker picks up job         ──▶ Builds structured prompt
-5. Calls LLM (GPT-4 / Claude)  ──▶ Receives raw JSON response
-6. Parses with Zod schema      ──▶ Validates structure
-7. Saves to MongoDB            ──▶ Updates assignment status
-8. Emits Socket.io event       ──▶ Frontend receives 'completed'
-9. Frontend fetches result     ──▶ Renders structured paper
+┌──────────────────────────────────────────────────────────────┐
+│                      VedaAI SPA (Vite)                       │
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Views Layer                                                 │
+│  ├─ Home (Welcome + stats)                                  │
+│  ├─ Assignments (List + search/filter)                      │
+│  ├─ Create (2-step form with validation)                    │
+│  ├─ ViewPaper (Question paper display)                      │
+│  └─ AIToolkit (Playground)                                  │
+│                                                              │
+│  Components Layer (Reusable)                                 │
+│  ├─ Sidebar (Desktop nav + logo)                            │
+│  ├─ Header (Breadcrumb + actions)                           │
+│  ├─ MobileHeader + MobileNav (Responsive)                   │
+│  ├─ AssignmentCard (Grid display)                           │
+│  └─ FormSteps (Multi-step wizard)                           │
+│                                                              │
+│  State Management (Zustand)                                  │
+│  ├─ assignments[] (Full list)                               │
+│  ├─ selectedAssignment (Active)                             │
+│  ├─ formData (Multi-step form state)                        │
+│  ├─ isGenerating (Progress tracking)                        │
+│  ├─ progressSteps[] (7-stage WS sim)                        │
+│  └─ helpers (CRUD + generation)                             │
+│                                                              │
+│  Utilities & Helpers                                         │
+│  ├─ AI Generator (buildPrompt → parse → validate)           │
+│  ├─ PDF Exporter (jsPDF + html2canvas)                      │
+│  └─ WebSocket Simulator (Realistic progress)                │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+            │
+            │ REST API + WebSocket
+            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                   Backend (Optional Deployment)              │
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  HTTP Layer (Express + TypeScript)                           │
+│  ├─ POST   /api/assignments (Create + queue)               │
+│  ├─ GET    /api/assignments (List)                         │
+│  ├─ GET    /api/assignments/:id (Fetch single)            │
+│  ├─ POST   /api/assignments/:id/regenerate (Re-queue)     │
+│  ├─ DELETE /api/assignments/:id (Remove)                  │
+│  └─ GET    /api/assignments/:id/pdf (Server export)       │
+│                                                              │
+│  Job Queue Layer (BullMQ + Redis)                            │
+│  ├─ paper-generation queue                                  │
+│  ├─ pdf-export queue                                        │
+│  └─ 7-step progress tracking                                │
+│                                                              │
+│  AI Integration (LLM Handler)                                │
+│  ├─ buildPrompt(formData) → structured prompt              │
+│  ├─ callLLM(prompt) → JSON response                        │
+│  └─ validatePaper(response) → typed schema                 │
+│                                                              │
+│  Database Layer                                              │
+│  ├─ MongoDB (Assignments + Papers)                          │
+│  ├─ Redis (Cache + BullMQ backend)                          │
+│  └─ Connection pooling + retries                            │
+│                                                              │
+│  Real-Time Layer (Socket.io)                                 │
+│  ├─ connection event (handshake)                            │
+│  ├─ progress event (7 stages with % + message)             │
+│  ├─ completed event (paper ready)                           │
+│  └─ error event (fallback handling)                         │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
 ```
+
+### Data Flow & Request Lifecycle
+
+```
+User submits form
+  ↓
+Frontend validation (Zod schemas)
+  ↓
+Zustand dispatch (setFormData)
+  ↓
+POST /api/assignments { formData }
+  ↓ [Backend]
+  ├─ Create Assignment doc (status: 'generating')
+  ├─ Add to BullMQ queue
+  └─ Return { assignmentId, jobId }
+  ↓ [Frontend]
+  ├─ Store in Zustand
+  ├─ Start WebSocket simulation
+  └─ Display 7-stage progress
+  ↓ [Worker - Async]
+  ├─ buildPrompt(formData)
+  ├─ Emit WS: progress (15%)
+  ├─ callLLM(prompt) → raw JSON
+  ├─ Emit WS: progress (50%)
+  ├─ ParsePaper(JSON) → validated schema
+  ├─ Emit WS: progress (80%)
+  ├─ Save to MongoDB
+  ├─ Emit WS: completed { paper }
+  └─ Clear job from queue
+  ↓ [Frontend]
+  ├─ Receive completed event
+  ├─ fetchAssignment(assignmentId)
+  ├─ Render ViewPaper component
+  └─ Enable regenerate + PDF export
+```
+
+### Scaling Considerations
+
+| Layer | Strategy | Notes |
+|-------|----------|-------|
+| **Frontend** | CDN + lazy-load | Vite build to Vercel CF |
+| **API** | Horizontal scaling | Express behind load balancer |
+| **Queue** | Redis cluster | Multiple BullMQ workers |
+| **Database** | MongoDB Atlas replica set | Auto-sharding at scale |
+| **Cache** | Redis + CDN headers | Assignment list caching |
+| **AI** | Rate limiting + circuit breaker | Prevent LLM cost overages |
 
 <br />
 
